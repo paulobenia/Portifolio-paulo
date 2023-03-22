@@ -1,0 +1,76 @@
+
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.ap{
+    text-align: center;
+    color: white;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -70px;
+    max-height: 500px;
+    position: relative;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #272c2c00;
+    text-transform: uppercase;
+}
+
+.ap::before, .ap::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    background: linear-gradient(45deg, #005eff, #2600ff, #060d12, #001aff, #031c39, #000000, #000000,
+    #005eff, #2600ff, #060d12, #001aff, #031c39);
+    background-size: 300%;
+    border-radius: 50px;
+    animation: AnimarBorda 8s linear infinite;
+    opacity: 5%;
+}
+
+@keyframes AnimarBorda{
+    0%{
+    background-position: 0;
+    }
+    100%{
+    background-position: 300%;
+    }
+}
+
+.ap::after{
+    filter: blur(50px);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+/* Efeito fade in*/
+
+body {
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
